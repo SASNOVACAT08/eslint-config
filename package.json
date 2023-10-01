@@ -1,10 +1,10 @@
 {
   "name": "@sncat/eslint-config",
   "type": "module",
-  "version": "1.0.0-beta.18",
+  "version": "1.0.0-alpha.1",
   "packageManager": "pnpm@8.8.0",
   "description": "Ruben's ESLint config",
-  "author": "Ruben Barros <ruben.barr08@gmail.com > (https://github.com/sasnovacat08/)",
+  "author": "Ruben Barros <ruben.barr08@gmail.com> (https://github.com/sasnovacat08/)",
   "license": "MIT",
   "funding": "https://github.com/sponsors/antfu",
   "homepage": "https://github.com/sasnovacat08/eslint-config",
