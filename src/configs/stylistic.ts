@@ -10,8 +10,6 @@ export function stylistic(): FlatESLintConfigItem[] {
         style: pluginStylistic,
       },
       rules: {
-        'antfu/consistent-list-newline': 'error',
-        'antfu/if-newline': 'error',
         'antfu/top-level-function': 'error',
 
         'curly': ['error', 'multi-or-nest', 'consistent'],
