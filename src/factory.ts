@@ -22,6 +22,7 @@ import {
   yaml,
 } from './configs'
 import { combine } from './utils'
+import { tailwindcss } from './configs/tailwindcss'
 
 const flatConfigProps: (keyof FlatESLintConfigItem)[] = [
   'files',
@@ -41,6 +42,11 @@ const VuePackages = [
   '@slidev/cli',
 ]
 
+const TailwindCssPackages = [
+  'tailwindcss',
+  '@nuxtjs/tailwindcss',
+]
+
 /**
  * Construct an array of ESLint flat config items.
  */
@@ -51,6 +57,7 @@ export function sncat(options: OptionsConfig & FlatESLintConfigItem = {}, ...use
     typescript: enableTypeScript = isPackageExists('typescript'),
     stylistic: enableStylistic = true,
     gitignore: enableGitignore = true,
+    tailwindcss: enableTailwindCss = TailwindCssPackages.some(i => isPackageExists(i)),
     overrides = {},
     componentExts = [],
   } = options
@@ -114,6 +121,14 @@ export function sncat(options: OptionsConfig & FlatESLintConfigItem = {}, ...use
       stylistic: enableStylistic,
       typescript: !!enableTypeScript,
     }))
+  }
+
+  if (enableTailwindCss) {
+    configs.push(
+      tailwindcss({
+        overrides: overrides.tailwindcss,
+      }),
+    )
   }
 
   if (options.jsonc ?? true) {

@@ -13,7 +13,9 @@ const incrementCounter = () => {
 
 <template>
   <div>
-    <h1>{{ greeting }}</h1>
+    <h1 class="fixed mt-2">
+      {{ greeting }}
+    </h1>
     <button @click="incrementCounter">
       Click me!
     </button>

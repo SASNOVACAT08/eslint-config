@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 >{{ greeting }}</h1>
+    <h1 class="mt-2 fixed" >{{ greeting }}</h1>
     <button @click="incrementCounter">Click me!
     </button>
     <p>Counter: {{ counter }}</p>

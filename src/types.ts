@@ -173,6 +173,13 @@ export interface OptionsConfig extends OptionsComponentExts {
   stylistic?: boolean
 
   /**
+   * Enable tailwind rules.
+   *
+   * @default auto-detect based on the dependencies
+   */
+  tailwindcss?: boolean
+
+  /**
    * Control to disable some rules in editors.
    * @default auto-detect based on the process.env
    */
@@ -189,5 +196,6 @@ export interface OptionsConfig extends OptionsComponentExts {
     jsonc?: FlatESLintConfigItem['rules']
     markdown?: FlatESLintConfigItem['rules']
     yaml?: FlatESLintConfigItem['rules']
+    tailwindcss?: FlatESLintConfigItem['rules']
   }
 }
