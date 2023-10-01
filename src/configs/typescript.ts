@@ -40,7 +40,7 @@ export function typescript(
   return [
     {
       // Install the plugins without globs, so they can be configured separately.
-      name: 'antfu:typescript:setup',
+      name: 'sncat:typescript:setup',
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,
@@ -65,7 +65,7 @@ export function typescript(
           ...parserOptions as any,
         },
       },
-      name: 'antfu:typescript:rules',
+      name: 'sncat:typescript:rules',
       rules: {
         ...renameRules(
           pluginTs.configs['eslint-recommended'].overrides![0].rules!,
@@ -117,7 +117,7 @@ export function typescript(
     },
     {
       files: ['**/*.d.ts'],
-      name: 'antfu:typescript:dts-overrides',
+      name: 'sncat:typescript:dts-overrides',
       rules: {
         'eslint-comments/no-unlimited-disable': OFF,
         'import/no-duplicates': OFF,
@@ -126,14 +126,14 @@ export function typescript(
     },
     {
       files: ['**/*.{test,spec}.ts?(x)'],
-      name: 'antfu:typescript:tests-overrides',
+      name: 'sncat:typescript:tests-overrides',
       rules: {
         'no-unused-expressions': OFF,
       },
     },
     {
       files: ['**/*.js', '**/*.cjs'],
-      name: 'antfu:typescript:javascript-overrides',
+      name: 'sncat:typescript:javascript-overrides',
       rules: {
         'ts/no-require-imports': OFF,
         'ts/no-var-requires': OFF,

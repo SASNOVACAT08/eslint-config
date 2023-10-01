@@ -13,7 +13,7 @@ export function vue(
 
   return [
     {
-      name: 'antfu:vue:setup',
+      name: 'sncat:vue:setup',
       plugins: {
         vue: pluginVue,
       },
@@ -31,7 +31,7 @@ export function vue(
           sourceType: 'module',
         },
       },
-      name: 'antfu:vue:rules',
+      name: 'sncat:vue:rules',
       processor: pluginVue.processors['.vue'],
       rules: {
         ...pluginVue.configs.base.rules as any,

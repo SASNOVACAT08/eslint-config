@@ -4,7 +4,7 @@ import { pluginComments } from '../plugins'
 export function comments(): FlatESLintConfigItem[] {
   return [
     {
-      name: 'antfu:eslint-comments',
+      name: 'sncat:eslint-comments',
       plugins: {
         'eslint-comments': pluginComments,
       },

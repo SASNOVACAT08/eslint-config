@@ -4,7 +4,7 @@ import { pluginAntfu, pluginStylistic } from '../plugins'
 export function stylistic(): FlatESLintConfigItem[] {
   return [
     {
-      name: 'antfu:stylistic',
+      name: 'sncat:stylistic',
       plugins: {
         antfu: pluginAntfu,
         style: pluginStylistic,

@@ -4,7 +4,7 @@ import { pluginNode } from '../plugins'
 export function node(): FlatESLintConfigItem[] {
   return [
     {
-      name: 'antfu:node',
+      name: 'sncat:node',
       plugins: {
         node: pluginNode,
       },

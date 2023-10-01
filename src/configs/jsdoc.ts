@@ -8,7 +8,7 @@ export function jsdoc(options: OptionsStylistic = {}): FlatESLintConfigItem[] {
 
   return [
     {
-      name: 'antfu:jsdoc',
+      name: 'sncat:jsdoc',
       plugins: {
         jsdoc: pluginJsdoc,
       },

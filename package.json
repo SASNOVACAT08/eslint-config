@@ -1,13 +1,12 @@
 {
-  "name": "@antfu/eslint-config",
+  "name": "@sncat/eslint-config",
   "type": "module",
   "version": "1.0.0-beta.18",
   "packageManager": "pnpm@8.8.0",
-  "description": "Anthony's ESLint config",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",
+  "description": "Ruben's ESLint config",
+  "author": "Ruben Barros <ruben.barr08@gmail.com > (https://github.com/sasnovacat08/)",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/eslint-config",
+  "homepage": "https://github.com/sasnovacat08/eslint-config",
   "keywords": [
     "eslint-config"
   ],
@@ -62,8 +61,8 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "workspace:*",
     "@antfu/ni": "^0.21.8",
+    "@sncat/eslint-config": "workspace:*",
     "@stylistic/eslint-plugin-migrate": "^0.0.6",
     "@types/eslint": "^8.44.3",
     "@types/fs-extra": "^11.0.2",

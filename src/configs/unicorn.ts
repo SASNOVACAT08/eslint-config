@@ -4,7 +4,7 @@ import { pluginUnicorn } from '../plugins'
 export function unicorn(): FlatESLintConfigItem[] {
   return [
     {
-      name: 'antfu:unicorn',
+      name: 'sncat:unicorn',
       plugins: {
         unicorn: pluginUnicorn,
       },

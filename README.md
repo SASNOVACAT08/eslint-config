@@ -1,4 +1,4 @@
-# @antfu/eslint-config
+# @sncat/eslint-config
 
 [![npm](https://img.shields.io/npm/v/@antfu/eslint-config?color=444&label=)](https://npmjs.com/package/@antfu/eslint-config) [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
@@ -21,7 +21,7 @@
 ### Install
 
 ```bash
-pnpm i -D eslint @antfu/eslint-config
+pnpm add -D eslint @sncat/eslint-config
 ```
 
 ### Create config file
@@ -30,18 +30,18 @@ With [`"type": "module"`](https://nodejs.org/api/packages.html#type) in `package
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu()
+export default sncat()
 ```
 
 With CJS:
 
 ```js
 // eslint.config.js
-const antfu = require('@antfu/eslint-config').default
+const sncat = require('@sncat/eslint-config').default
 
-module.exports = antfu()
+module.exports = sncat()
 ```
 
 > Note that `.eslintignore` no longer works in Flat config, see [customization](#customization) for more details.
@@ -117,18 +117,18 @@ Normally you only need to import the `antfu` preset:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu()
+export default sncat()
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu({
+export default sncat({
   stylistic: true, // enable stylistic formatting rules
   typescript: true,
   vue: true,
@@ -143,15 +143,15 @@ export default antfu({
 })
 ```
 
-The `antfu` factory function also accepts any number of arbitrary custom config overrides:
+The `sncat` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@antfu/eslint-config'
 
-export default antfu(
+export default sncat(
   {
-    // Configures for antfu's config
+    // Configures for sncat's config
   },
 
   // From the second arguments they are ESLint Flat Configs
@@ -186,7 +186,7 @@ import {
   unicorn,
   vue,
   yml,
-} from '@antfu/eslint-config'
+} from '@sncat/eslint-config'
 
 export default [
   ...ignores(),
@@ -205,9 +205,7 @@ export default [
 ]
 ```
 
-Check out the [configs](https://github.com/antfu/eslint-config/blob/main/src/configs) and [factory](https://github.com/antfu/eslint-config/blob/main/src/factory.ts) for more details.
-
-> Thanks to [sxzz/eslint-config](https://github.com/sxzz/eslint-config) for the inspiration and reference.
+Check out the [configs](https://github.com/sasnovacat08/eslint-config/blob/main/src/configs) and [factory](https://github.com/sasnovacat08/eslint-config/blob/main/src/factory.ts) for more details.
 
 ## Plugins Renaming
 
@@ -237,9 +235,9 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu(
+export default sncat(
   { vue: true, typescript: true },
   {
     // Remember to specify the file glob here, otherwise it might cause the vue plugin to handle non-vue files
@@ -261,9 +259,9 @@ We also provided an `overrides` options to make it easier:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu({
+export default sncat({
   overrides: {
     vue: {
       'vue/operator-linebreak': ['error', 'before'],
@@ -283,9 +281,9 @@ You can optionally enable the [type aware rules](https://typescript-eslint.io/li
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import sncat from '@sncat/eslint-config'
 
-export default antfu({
+export default sncat({
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },

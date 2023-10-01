@@ -13,7 +13,7 @@ export function yaml(
 
   return [
     {
-      name: 'antfu:yaml:setup',
+      name: 'sncat:yaml:setup',
       plugins: {
         yaml: pluginYaml as any,
       },
@@ -23,7 +23,7 @@ export function yaml(
       languageOptions: {
         parser: parserYaml,
       },
-      name: 'antfu:yaml:rules',
+      name: 'sncat:yaml:rules',
       rules: {
         'style/spaced-comment': OFF,
 

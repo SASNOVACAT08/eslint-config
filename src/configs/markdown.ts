@@ -11,14 +11,14 @@ export function markdown(options: OptionsComponentExts & OptionsOverrides = {}):
 
   return [
     {
-      name: 'antfu:markdown:setup',
+      name: 'sncat:markdown:setup',
       plugins: {
         markdown: pluginMarkdown,
       },
     },
     {
       files: [GLOB_MARKDOWN],
-      name: 'antfu:markdown:processor',
+      name: 'sncat:markdown:processor',
       processor: 'markdown/markdown',
     },
     {
@@ -33,7 +33,7 @@ export function markdown(options: OptionsComponentExts & OptionsOverrides = {}):
           },
         },
       },
-      name: 'antfu:markdown:rules',
+      name: 'sncat:markdown:rules',
       rules: {
         'antfu/no-cjs-exports': OFF,
         'antfu/no-ts-export-equal': OFF,

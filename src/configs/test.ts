@@ -11,7 +11,7 @@ export function test(options: OptionsIsInEditor & OptionsOverrides = {}): FlatES
 
   return [
     {
-      name: 'antfu:test:setup',
+      name: 'sncat:test:setup',
       plugins: {
         test: {
           ...pluginVitest,
@@ -25,7 +25,7 @@ export function test(options: OptionsIsInEditor & OptionsOverrides = {}): FlatES
     },
     {
       files: GLOB_TESTS,
-      name: 'antfu:test:rules',
+      name: 'sncat:test:rules',
       rules: {
         'test/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
         'test/no-identical-title': 'error',

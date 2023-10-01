@@ -8,7 +8,7 @@ export function imports(options: OptionsStylistic = {}): FlatESLintConfigItem[] 
 
   return [
     {
-      name: 'antfu:imports',
+      name: 'sncat:imports',
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,

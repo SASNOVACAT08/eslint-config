@@ -9,7 +9,7 @@ export function sortPackageJson(): FlatESLintConfigItem[] {
   return [
     {
       files: ['**/package.json'],
-      name: 'antfu:sort-package-json',
+      name: 'sncat:sort-package-json',
       rules: {
         'jsonc/sort-array-values': [
           'error',
@@ -104,7 +104,7 @@ export function sortTsconfig(): FlatESLintConfigItem[] {
   return [
     {
       files: ['**/tsconfig.json', '**/tsconfig.*.json'],
-      name: 'antfu:sort-tsconfig',
+      name: 'sncat:sort-tsconfig',
       rules: {
         'jsonc/sort-keys': [
           'error',
