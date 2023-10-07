@@ -11,7 +11,6 @@ export function stylistic(): FlatESLintConfigItem[] {
       },
       rules: {
         'antfu/consistent-list-newline': 'error',
-        'antfu/top-level-function': 'error',
 
         'curly': ['error', 'multi-or-nest', 'consistent'],
         'style/array-bracket-spacing': ['error', 'never'],
